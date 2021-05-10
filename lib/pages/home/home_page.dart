@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                       itemBuilder: (BuildContext context, int index) {
                         final post = widget.posts[index];
                         return Container(
-                          height: 100,
+                          height: 500,
                           margin: EdgeInsets.all(10),
                           padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
@@ -85,10 +85,20 @@ class _HomePageState extends State<HomePage> {
                             children: <Widget>[
                               Text(
                                 post.title,
-                                textAlign: TextAlign.left,
+                                textAlign: TextAlign.justify,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 18,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Container(
+                                color: Colors.green,
+                                child: Text(
+                                  post.body,
+                                  textAlign: TextAlign.left,
                                 ),
                               ),
                             ],
@@ -96,7 +106,13 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       separatorBuilder: (BuildContext context, int index) =>
-                          const Divider(),
+                          const Divider(
+                        height: 15,
+                        thickness: 2,
+                        indent: 30,
+                        endIndent: 30,
+                        color: Colors.pink,
+                      ),
                     ),
                   ),
                 ),
