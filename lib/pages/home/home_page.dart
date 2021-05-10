@@ -74,41 +74,54 @@ class _HomePageState extends State<HomePage> {
                       itemBuilder: (BuildContext context, int index) {
                         final post = widget.posts[index];
                         return Container(
-                          height: 500,
+                          height: 250,
                           margin: EdgeInsets.all(10),
                           padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(5),
                           ),
-                          child: PageView(
+                          child: Column(
                             children: <Widget>[
                               Text(
                                 post.title,
-                                textAlign: TextAlign.justify,
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 18,
                                 ),
                               ),
-                              SizedBox(
-                                width: 20,
+                              const Divider(
+                                height: 20,
+                                thickness: 0.5,
+                                indent: 90,
+                                endIndent: 90,
+                                color: Colors.grey,
                               ),
-                              Container(
-                                color: Colors.green,
-                                child: Text(
-                                  post.body,
-                                  textAlign: TextAlign.left,
-                                ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                post.body,
+                                textAlign: TextAlign.justify,
                               ),
                             ],
                           ),
+                          /* Text(
+                            post.title,
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+
+                            ),
+                          ), */
                         );
                       },
                       separatorBuilder: (BuildContext context, int index) =>
                           const Divider(
                         height: 15,
-                        thickness: 2,
+                        thickness: 1.5,
                         indent: 30,
                         endIndent: 30,
                         color: Colors.pink,
@@ -166,3 +179,26 @@ class _HomePageState extends State<HomePage> {
           }),
     );
   } */
+
+/* child: PageView(
+                            children: <Widget>[
+                              Text(
+                                post.title,
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Container(
+                                color: Colors.green,
+                                child: Text(
+                                  post.body,
+                                  textAlign: TextAlign.left,
+                                ),
+                              ),
+                            ],
+                          ), */
