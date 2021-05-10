@@ -1,3 +1,4 @@
+import 'package:dreamposts/pages/home/widgets/my_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:dreamposts/models/post.dart';
@@ -47,6 +48,20 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple,
+      body: Stack(
+        // empilhar os componentes da página
+        children: <Widget>[
+          MyAppBar(),
+        ],
+      ),
+    );
+  }
+}
+
+/* @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         brightness: Brightness.dark,
         leading: Align(
@@ -81,5 +96,4 @@ class _HomePageState extends State<HomePage> {
             );
           }),
     );
-  }
-}
+  } */
