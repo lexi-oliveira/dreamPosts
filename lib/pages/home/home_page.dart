@@ -47,12 +47,56 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double _screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.purple,
       body: Stack(
         // empilhar os componentes da página
         children: <Widget>[
           MyAppBar(),
+          Positioned(
+            top: _screenHeight * .14,
+            height: _screenHeight * .86,
+            left: 0,
+            right: 0,
+            child: PageView(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.purple,
+                      //borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: ListView.separated(
+                      padding: const EdgeInsets.all(5),
+                      itemCount: widget.posts.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        final post = widget.posts[index];
+                        return Container(
+                          height: 100,
+                          margin: EdgeInsets.all(10),
+                          padding: EdgeInsets.all(30),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: Center(
+                            child: Text(post.title),
+                          ),
+                        );
+                      },
+                      separatorBuilder: (BuildContext context, int index) =>
+                          const Divider(),
+                    ),
+                  ),
+                ),
+                /* Container(
+                  color: Colors.white,
+                ), */
+              ],
+            ),
+          ),
         ],
       ),
     );
