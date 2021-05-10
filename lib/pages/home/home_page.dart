@@ -76,13 +76,22 @@ class _HomePageState extends State<HomePage> {
                         return Container(
                           height: 100,
                           margin: EdgeInsets.all(10),
-                          padding: EdgeInsets.all(30),
+                          padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(5),
                           ),
-                          child: Center(
-                            child: Text(post.title),
+                          child: PageView(
+                            children: <Widget>[
+                              Text(
+                                post.title,
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ],
                           ),
                         );
                       },
