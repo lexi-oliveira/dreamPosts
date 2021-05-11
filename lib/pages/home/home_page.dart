@@ -1,4 +1,5 @@
 import 'package:dreamposts/pages/home/widgets/my_app_bar.dart';
+import 'package:dreamposts/pages/post_order_details.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:dreamposts/models/post.dart';
@@ -69,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                       //borderRadius: BorderRadius.circular(5),
                     ),
                     child: ListView.separated(
-                      padding: const EdgeInsets.all(5),
+                      padding: const EdgeInsets.all(30),
                       itemCount: widget.posts.length,
                       itemBuilder: (BuildContext context, int index) {
                         final post = widget.posts[index];
@@ -77,35 +78,51 @@ class _HomePageState extends State<HomePage> {
                           height: 250,
                           margin: EdgeInsets.all(10),
                           padding: EdgeInsets.all(10),
+                          alignment: Alignment.centerLeft,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(5),
                           ),
-                          child: Column(
-                            children: <Widget>[
-                              Text(
-                                post.title,
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => PostOrderDetails(),
                                 ),
-                              ),
-                              const Divider(
-                                height: 20,
-                                thickness: 0.5,
-                                indent: 90,
-                                endIndent: 90,
-                                color: Colors.grey,
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                post.body,
-                                textAlign: TextAlign.justify,
-                              ),
-                            ],
+                              );
+                            },
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Text(
+                                  post.title,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                const Divider(
+                                  height: 20,
+                                  thickness: 0.5,
+                                  indent: 90,
+                                  endIndent: 90,
+                                  color: Colors.grey,
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text(
+                                  post.body,
+                                  textAlign: TextAlign.justify,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           /* Text(
                             post.title,
