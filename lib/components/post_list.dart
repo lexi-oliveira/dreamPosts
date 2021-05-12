@@ -30,7 +30,7 @@ class _PostListState extends State<PostList> {
               borderRadius: BorderRadius.circular(5),
             ),
             child: InkWell(
-              //função chama a página com os detalhes de um post após clicar nele
+              //widget que chama a página com os detalhes de um post após clicar nele
               onTap: () {
                 Navigator.push(
                   context,
