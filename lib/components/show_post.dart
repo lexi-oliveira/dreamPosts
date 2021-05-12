@@ -35,7 +35,7 @@ class _ShowPostState extends State<ShowPost> {
           height: 20,
         ),
         Text(
-          widget.post.body,
+          widget.post.body.replaceAll('\n', ' '),
           textAlign: TextAlign.justify,
           style: TextStyle(
             fontSize: widget.bodySize,
