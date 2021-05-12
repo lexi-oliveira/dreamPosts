@@ -15,7 +15,7 @@ class MyAppBar extends StatelessWidget {
             //mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               SizedBox(
-                width: 20,
+                width: 30,
               ),
               Image.asset(
                 'assets/images/dreamlabs.png',

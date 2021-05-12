@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-//import 'package:flutter/services.dart';
 import 'pages/home/home_page.dart';
 
 void main() {
@@ -18,7 +17,6 @@ class DreamPosts extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.purple,
-        //brightness: Brightness.light,
       ),
       home: HomePage(),
     );
