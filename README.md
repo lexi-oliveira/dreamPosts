@@ -1,16 +1,47 @@
 # dreamposts
 
-A new Flutter project.
+Projeto desenvolvido para iniciar o aprendizado em Flutter, que também envolveu acesso a conteúdo externo.
 
-## Getting Started
+## Começando
 
-This project is a starting point for a Flutter application.
+Para executar o projeto será necessário instalar o Flutter.
+Utilize a documentação do Flutter para instalá-lo disponível em: 
+* https://flutter.dev/docs/get-started <br/>
 
-A few resources to get you started if this is your first Flutter project:
+Além do Flutter, é necessário ter um emulador de Android/iOS ou um aparelho celular para 
+executar o projeto. Você pode, por exemplo, utilizar o emulador do Android Studio, a documentação acima também auxilia a instalá-lo.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Desenvolvimento
+Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num diretório de sua preferência:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+`cd "diretorio de sua preferencia"` <br/>
+`git clone https://github.com/mateuss-oliveira/dreamPosts`
+
+## Construção
+
+Para construir o projeto com o Flutter, acesse a pasta que contém o projeto e escolha um dispositivo para executar a aplicação.
+Para ver os dispositivos disponíveis execute o comando: <br/>
+`flutter devices`<br/>
+Após escolher o dispositivo, execute o comando: <br/>
+`flutter run -d "nome do dispositivo escolhido"`<br/>
+O comando irá executar a aplicação do dispositivo escolhido.
+
+## Features
+
+O projeto pode ser usado como modelo para iniciar o desenvolvimento de um projeto utilizando Flutter.
+Ele também demonstra de forma prática como acessar conteúdo externo de uma API.
+
+## Status do Projeto
+
+Projeto concluído.
+
+## Visualização
+
+As páginas da aplicação podem ser visualizadas abaixo:
+
+- Página inicial
+  ![](.github/img1.png)
+  
+- Página contendo detalhes de um post
+  ![](.github/img2.png)
