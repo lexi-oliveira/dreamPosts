@@ -40,8 +40,8 @@ Projeto concluído.
 
 As páginas da aplicação podem ser visualizadas abaixo:
 
-- Página inicial
-  ![](.github/img1.png)
+- Página inicial<br/>
+![](.github/img1.png)
   
-- Página contendo detalhes de um post
-  ![](.github/img2.png)
+- Página contendo detalhes de um post<br/>
+![](.github/img2.png)
