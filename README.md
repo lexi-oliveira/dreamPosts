@@ -5,7 +5,7 @@ Projeto desenvolvido para iniciar o aprendizado em Flutter, que também envolveu
 ## Começando
 
 Para executar o projeto será necessário instalar o Flutter.
-Utilize a documentação do Flutter para instalá-lo disponível em: 
+Utilize a própria documentação do Flutter para instalá-lo disponível em: 
 * https://flutter.dev/docs/get-started <br/>
 
 Além do Flutter, é necessário ter um emulador de Android/iOS ou um aparelho celular para 
@@ -25,7 +25,7 @@ Para ver os dispositivos disponíveis execute o comando: <br/>
 `flutter devices`<br/>
 Após escolher o dispositivo, execute o comando: <br/>
 `flutter run -d "nome do dispositivo escolhido"`<br/>
-O comando irá executar a aplicação do dispositivo escolhido.
+O comando irá executar a aplicação no dispositivo escolhido, sendo ele um aparelho celular real ou um dispositivo presente em um emulador.
 
 ## Features
 
@@ -40,8 +40,8 @@ Projeto concluído.
 
 As páginas da aplicação podem ser visualizadas abaixo:
 
-- Página inicial
-  ![](.github/img1.png)
+- Página inicial<br/>
+![](.github/img1.png)
   
-- Página contendo detalhes de um post
-  ![](.github/img2.png)
+- Página contendo detalhes de um post<br/>
+![](.github/img2.png)
